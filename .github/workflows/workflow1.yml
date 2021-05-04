@@ -23,5 +23,6 @@ jobs:
     # 每一个 - 代表着一个步骤 Step
     steps:
       - name: version
-        run: echo $PATH
+        run: |
+             echo $PATH
              node -v
