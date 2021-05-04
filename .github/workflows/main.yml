@@ -15,22 +15,13 @@ on:
 
 # 多个作业
 jobs:
-  # 一个作业名称
-  job1:
+  # 打印版本信息
+  print_version:
     # 运行时的基础环境
     runs-on: ubuntu-latest
 
     # 每一个 - 代表着一个步骤 Step
     steps:
-      # 依赖哪份代码仓库
-      - uses: actions/checkout@v2
-      
-      # 步骤一
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # 步骤二
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: version
+        run: echo $PATH
+             node -v
